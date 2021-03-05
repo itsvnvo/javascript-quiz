@@ -1,43 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Coding Quiz</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" type="text/css" href="./assets/style.css" />
-  </head>
-  <body>
-    <header>
-      <div class= "large-font">Coding Quiz</div>
-      <button class="start-button">Start</button>
-    </header>
 
-    <main>
-      <section>
-        <div class="">
-          <div class=""></div>
-        </div>
-      </section>
+<head>
+  <title>Coding Quiz</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="./assets/style.css" />
+</head>
 
-      <section>
-        <div class="correct">
-          <div class = "correct-wrong-container">
-          <div>
-          <h2>Wins: <span class="correct">0 </span> </h2>
-          <h2>Losses: <span class="wrong">0</span></h2>
+<body>
+  <header>
+    <div class="title">Coding Quiz</div>
+    <button onclick="startQuiz()" class="start-button";>
+      <h1>Start Quiz</h1>
+    </button>
+  </header>
+
+  <main>
+    <section>
+      <div class="instruction-box">
+        <div class="instruction-title">
+          <span>Instructions</span>
         </div>
-          <button class="reset-button">Reset Score</button>
+        <div class=info>In this timed quiz you will have 30 seconds from the start. </div>
+        <div class=info> For each question answered correct you will get 5 seconds, for each answer you get wrong it
+          will deduct 5 secs.</div>
+        <div class=info>When the timer hits 0 you lose, you win with a highscore when all questions are answered!
+        </div>
       </div>
-          <div class= "card timer">
-            <div class = "timer-text">
-            <div class="large-font timer-count">60</div>
-            <h3>seconds remaining</h3>
-          </div>
-        
-          </div>
-        </div>
-      </section>
+    </section>
+
+  <section>
+      <div class = "correct-container">
+      <div>
+      <h2>Wins: <span class="correct">0 </span> </h2>
+    </div>
+  </div>
+      <div class= "card timer">
+        <div class = "timer-text">
+        <div class="large-font timer-count">30</div>
+        <h3>seconds remaining</h3>
+      </div>
+
     </main>
-    <script src="assets/script.js"></script>
-  </body>
+  <script src="assets/script.js"></script>
+</body>
+
 </html>
