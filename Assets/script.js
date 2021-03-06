@@ -142,6 +142,7 @@ function nextQuestion() {
 }
 //Gets users intials
 function getIntials() {
+    localStorage.clear();
     userInitials = prompt("Please enter your initials!")
     return userInitials 
 }
@@ -154,7 +155,7 @@ function getScores() {
     displayScore = "";
     var i;
     for (i = 0; i < intialsNameStored.length; i++) {
-        var scoreText = " - - " + intialsNameStored[i] + " : " + intialsScoreStored[i] + " -- ";
+        var scoreText = "-- " + intialsNameStored[i] + " : " + intialsScoreStored[i] + " --";
         var newLi = document.createElement('li')
         newLi.append(document.createTextNode(scoreText))
         document.getElementById('scoreBoard').append(newLi)
