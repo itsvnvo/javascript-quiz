@@ -6,27 +6,50 @@ var questions = document.querySelector(".questions");
 var isCorrect = false;
 var intialsNameStored = Object.keys(localStorage);
 var intialsScoreStored = Object.values(localStorage);
-var currentQuestion = 0;
-var quizArray = [
+var getQuestions = [
     {
-        question:
-        "What is referred to as the Skin of a website",
-        options: ["CSS", "Donuts", "HTML", "Bones"],
-        correct:0
+        numb: 1,
+        question: "What does HTML stand for?",
+        answer: "Hyper Text Markup Language",
+        options: [
+            "Hyper Text Markup Language",
+            "Hot Tamales make lava",
+            "How to make lasagna",
+            "Heres too many Llamas"
+        ]
     }
-];
+]
+var questionArray = Object.values(getQuestions);
+// document.getElementsByClassName("quiz-text").innerHTML = "correct"
 
-function getQuestions(){
-    question.textContent = quizArray[currentQuestion].question;
-    var optionsBtn = [];
-    var indexarray = [];
+function buttonA_Selected() {
+    console.log("Click A");
+}
+function buttonB_Selected() {
+    console.log("Click B");
+}
+function buttonC_Selected() {
+    console.log("Click C");
+}
+function buttonD_Selected() {
+    console.log("Click D");
+}
+function checkAnswer(){
+    var selectedButton;{
+    }
 }
 
 function startQuiz() {
     isCorrect = false;
-    timerCount = 30;
+    var timerCount = 30;
     startButton.disabled = true;
-    startTimer();
+    // startTimer();
+    document.getElementsByClassName("quiz-text")[0].innerHTML = getQuestions[0].question;
+    document.getElementById("buttonA").innerHTML = getQuestions[0].options[0];
+    document.getElementById("buttonB").innerHTML = getQuestions[0].options[1];
+    document.getElementById("buttonC").innerHTML = getQuestions[0].options[2];
+    document.getElementById("buttonD").innerHTML = getQuestions[0].options[3];
+    // document.getElementsByClassName("optiontext-list")[0].innerHTML = getQuestions[0].options;
 };
 
 function startTimer() {
@@ -38,4 +61,8 @@ function startTimer() {
         }
     }, 1000);
 }
+
+
+
+
 
