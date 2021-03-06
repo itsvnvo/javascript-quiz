@@ -35,10 +35,12 @@
       <div class="quiz-container">
         <div class="quiz-text">Questions will be here</div>
         <div class="optiontext-list">
-          <button class="select" id="buttonA" onclick=buttonA_Selected()></button>
-          <button class="select" id="buttonB" onclick=buttonB_Selected()></button>
-          <button class="select" id="buttonC" onclick=buttonC_Selected()></button>
-          <button class="select" id="buttonD" onclick=buttonD_Selected()></button>
+          <ul>
+          <li><button class="select" id="buttonA" onclick=buttonA_Selected()></button></li>
+          <li><button class="select" id="buttonB" onclick=buttonB_Selected()></button></li>
+          <li><button class="select" id="buttonC" onclick=buttonC_Selected()></button></li>
+          <li><button class="select" id="buttonD" onclick=buttonD_Selected()></button></li>
+        </ul>
           </button>
           </button>
           </button>
@@ -48,17 +50,19 @@
 
     <section>
       <div>
-        <h3>Correct: <span class="correct">0 </span> </h3>
+        <h3>Correct: <span class="correct">0</span> </h3>
       </div>
       <div class="card-timer">
         <div class="timer-text"></div>
         <div class="large-font timer-count">30</div>
         <h4>seconds remaining</h4>
       </div>
+      <ul id="scoreBoard">
+      </ul>
     </section>
 
   </main>
-  <script src="assets/script.js"></script>
+  <script src="assets/script.js" defer></script>
 </body>
 
 </html>
